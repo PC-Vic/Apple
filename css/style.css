@@ -1,6 +1,21 @@
-.box {
-    width: 100px;
-    height: 100px;
-    background: red;
-    position: relative; /* Needed for x/y movement */
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* NavBar Styling */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-links {
+    display: flex;
+    gap: 60px;
 }
