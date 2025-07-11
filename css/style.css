@@ -1,0 +1,6 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative; /* Needed for x/y movement */
+}
