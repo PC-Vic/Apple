@@ -19,3 +19,9 @@ body {
     display: flex;
     gap: 60px;
 }
+
+.nav-links a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+}
