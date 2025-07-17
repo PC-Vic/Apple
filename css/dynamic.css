@@ -20,6 +20,22 @@
     line-height: 1.6;
 }
 
+/* GSAP Pop-up Text */
 .pop-up-text {
   display: inline-block; /* Needed so GSAP can transform it */
+}
+
+/* Dynamic Phone Image */
+.dynamic-image {
+    margin-top: 64px;
+    margin-bottom: 0px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dynamic-image img {
+    max-width: 60%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
