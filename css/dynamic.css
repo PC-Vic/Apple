@@ -18,5 +18,8 @@
     max-width: 550px;
     margin: 0 auto;
     line-height: 1.6;
+}
 
+.pop-up-text {
+  display: inline-block; /* Needed so GSAP can transform it */
 }
