@@ -1,8 +1,10 @@
-.battery-container {
+
+/* Battery Header Styles */
+.battery-header-container {
     text-align: center;
     padding: 60px 20px;
     background-color: #000000;
-    height: 350vw;
+    /* height: 140vw; */
 }
 
 .battery-text h2 {
@@ -11,4 +13,11 @@
     line-height: 1.3;
     margin-bottom: 30px;
     color: white;
+}
+
+/* Battery Hours Section Styles */
+.Battery-hours-section {
+    background-color: #0d0d0f;
+    color: white;
+    padding: 60px 20px;
 }
