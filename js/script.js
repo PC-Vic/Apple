@@ -1,14 +1,11 @@
-// gsap.to(".box", {
-//     x: 200,
-// });
 
+/* Hero Right Side Animation */
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.from(".hero-right", {
   scrollTrigger: {
     trigger: ".hero-right",
     start: "top 80%",
-    // markers: true // optional for debugging
   },
   opacity: 0,
   x: 100,
@@ -17,18 +14,8 @@ gsap.from(".hero-right", {
   delay: 0.2
 });
 
-// Dynamic Pop up text animation //
-// gsap.from(".pop-up-text", {
-//   scrollTrigger: {
-//     trigger: ".pop-up-text",
-//     start: "top 80%",
-//   },
-//   scale: 0,
-//   opacity: 0,
-//   duration: 0.6,
-//   ease: "back.out(1.7)"
-// });
 
+/* Pop Up Animation */
 gsap.fromTo(".pop-up-text",
   {
     scale: 0,
@@ -37,7 +24,7 @@ gsap.fromTo(".pop-up-text",
   {
     scrollTrigger: {
       trigger: ".pop-up-text",
-      start: "top 80%",
+      start: "top 70%",
     },
     scale: 1,
     opacity: 1,
@@ -65,3 +52,31 @@ gsap.fromTo(".pop-up-text",
     }
   }
 );
+
+
+/*Battery Section Animation*/
+gsap.from(".battery-entry", {
+  opacity: 0,
+  y: 50,
+  duration: 1.9,
+  stagger: 1.1,
+  ease: "power3.out",
+  scrollTrigger: {
+    trigger: ".battery-content",
+    start: "top 35%",
+    toggleActions: "play none none none"
+  }
+});
+
+
+
+gsap.from(".battery-image img", {
+  scale: 0.8,
+  opacity: 0,
+  duration: 1,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".battery-content",
+    start: "top 65%"
+  }
+});
