@@ -11,7 +11,7 @@ gsap.from(".hero-right", {
   x: 100,
   duration: 1,
   ease: "power2.out",
-  delay: 0.2
+  delay: 0.5
 });
 
 
@@ -58,7 +58,7 @@ gsap.fromTo(".pop-up-text",
 gsap.from(".battery-entry", {
   opacity: 0,
   y: 50,
-  duration: 1.9,
+  duration: 1,
   stagger: 1.1,
   ease: "power3.out",
   scrollTrigger: {
