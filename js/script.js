@@ -80,3 +80,4 @@ gsap.from(".battery-image img", {
     start: "top 65%"
   }
 });
+

@@ -33,6 +33,15 @@ body {
     font-size: 26px;
 }
 
+.nav-links a:hover {
+    background: linear-gradient(90deg, #007aff, #ff2d55, #ff9500);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: color 0.3s ease;
+    
+}
+
 .nav-links i {
     font-size: 30px;
 }
@@ -102,6 +111,15 @@ body {
 
 /*Buy Button */
 .buy-button {
+    /* background-color: #1d1d1f;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem; */
+    
+    position: relative;
     background-color: #1d1d1f;
     color: white;
     padding: 12px 24px;
@@ -109,11 +127,30 @@ body {
     border-radius: 10px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s ease;
+    z-index: 0;
 }
 
-.buy-button:hover {
+.buy-button::after {
     background-color: #333;
+
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px; /* border thickness */
+    background: linear-gradient(90deg, #007aff, #ff2d55, #ff9500);
+    -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+}
+
+.buy-button:hover::after {
+    opacity: 1;
 }
 
 .price-note {
