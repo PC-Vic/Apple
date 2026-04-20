@@ -81,3 +81,46 @@ gsap.from(".battery-image img", {
   }
 });
 
+
+/* Mobile Nav Overlay */
+const navHamburger  = document.querySelector('.nav-hamburger');
+const navOverlay    = document.querySelector('.nav-overlay');
+const navClose      = document.querySelector('.nav-close');
+const overlayLinks  = document.querySelectorAll('.nav-overlay-links a');
+
+function openNav() {
+  navOverlay.classList.add('is-open');
+  navOverlay.setAttribute('aria-hidden', 'false');
+  navHamburger.setAttribute('aria-expanded', 'true');
+
+  gsap.fromTo(navOverlay,
+    { opacity: 0 },
+    { opacity: 1, duration: 0.45, ease: 'power2.inOut' }
+  );
+
+  gsap.fromTo(overlayLinks,
+    { opacity: 0, y: 28 },
+    { opacity: 1, y: 0, duration: 0.5, stagger: 0.09, ease: 'power2.out', delay: 0.2 }
+  );
+}
+
+function closeNav() {
+  navHamburger.setAttribute('aria-expanded', 'false');
+
+  gsap.to(overlayLinks, {
+    opacity: 0, y: -16, duration: 0.2, stagger: 0.04, ease: 'power2.in'
+  });
+
+  gsap.to(navOverlay, {
+    opacity: 0, duration: 0.38, delay: 0.1, ease: 'power2.inOut',
+    onComplete: () => {
+      navOverlay.classList.remove('is-open');
+      navOverlay.setAttribute('aria-hidden', 'true');
+    }
+  });
+}
+
+navHamburger.addEventListener('click', openNav);
+navClose.addEventListener('click', closeNav);
+overlayLinks.forEach(link => link.addEventListener('click', closeNav));
+

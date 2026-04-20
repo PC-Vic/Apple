@@ -39,3 +39,21 @@
     display: block;
     margin: 0 auto;
 }
+
+/* ============================
+   Mobile — 768px
+   ============================ */
+@media (max-width: 768px) {
+    .dynamic-image img {
+        max-width: 85%;
+    }
+}
+
+/* ============================
+   Mobile — 480px
+   ============================ */
+@media (max-width: 480px) {
+    .dynamic-image img {
+        max-width: 95%;
+    }
+}
